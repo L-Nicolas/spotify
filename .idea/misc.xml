@@ -25,12 +25,14 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13652482269503546" />
         <entry key="app/src/main/res/layout/activity_paroles.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/activity_search.xml" value="0.16893115942028986" />
+        <entry key="app/src/main/res/layout/fragment_album_rank.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/fragment_paroles.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19402651824548564" />
         <entry key="app/src/main/res/layout/fragment_track_rank.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/item_album.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/item_rank.xml" value="0.16893115942028986" />
+        <entry key="app/src/main/res/layout/item_rank_search.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/item_rank_shimmer.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/item_titre.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/list_item_rank.xml" value="0.16893115942028986" />
