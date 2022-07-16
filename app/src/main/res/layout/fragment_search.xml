@@ -23,22 +23,12 @@
             android:orientation="vertical"
             app:layout_constraintGuide_end="10dp" />
 
-        <ImageView
-            android:id="@+id/line_a4"
-            android:layout_width="300dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="9dp"
-            android:paddingBottom="20dp"
-            android:src="@color/grey"
-            app:layout_constraintLeft_toRightOf="@+id/guide_start"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <ImageView
             android:id="@+id/line_a2"
             android:layout_width="300dp"
             android:layout_height="1dp"
-            android:paddingBottom="20dp"
-            android:src="@color/grey"
+            android:src="@color/green"
             app:layout_constraintLeft_toRightOf="@+id/guide_start"
             app:layout_constraintTop_toBottomOf="@+id/title2" />
 
@@ -46,15 +36,16 @@
             android:id="@+id/line_a3"
             android:layout_width="300dp"
             android:layout_height="1dp"
-            android:paddingBottom="20dp"
-            android:src="@color/grey"
+            android:src="@color/green"
             app:layout_constraintLeft_toRightOf="@+id/guide_start"
             app:layout_constraintTop_toBottomOf="@+id/title3" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="386dp"
             android:layout_height="165dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/guide_start"
             app:layout_constraintTop_toBottomOf="@+id/line_a3" />
 
@@ -97,46 +88,54 @@
             app:layout_constraintLeft_toLeftOf="@id/guide_start"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            android:layout_width="391dp"
-            android:layout_height="47dp"
-            android:textSize="20sp"
+
+        <FrameLayout
+            android:layout_width="388dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="7dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/title2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            app:startIconDrawable="@drawable/ic_search">
+            app:layout_constraintTop_toBottomOf="@+id/title">
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/calc_txt_Prise"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_recherche_loupe"
+                android:hint=""
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/calc_clear_txt_Prise"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/ic_baseline_cancel_24" />
+
+        </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="386dp"
             android:layout_height="165dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="50dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="366dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+            app:layout_constraintTop_toBottomOf="@+id/line_a2">
 
         </androidx.recyclerview.widget.RecyclerView>
-
-        <androidx.constraintlayout.widget.Barrier
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:barrierDirection="top"
-            tools:layout_editor_absoluteX="129dp"
-            tools:layout_editor_absoluteY="159dp" />
-
-        <androidx.constraintlayout.widget.Barrier
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:barrierDirection="top"
-            tools:layout_editor_absoluteX="125dp"
-            tools:layout_editor_absoluteY="411dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
