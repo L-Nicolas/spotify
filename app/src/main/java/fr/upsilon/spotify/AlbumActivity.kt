@@ -3,6 +3,7 @@ package fr.upsilon.spotify
 import android.content.Intent
 import android.icu.text.CaseMap
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -54,7 +55,9 @@ class AlbumActivity : AppCompatActivity() {
 
         lifecycleScope.launch{
             try {
+                Log.i("data", album_id.toString())
                 val dataRes = ApiConnection.connection().create(AlbumService::class.java).getAlbumByIDDataAsync(album_id.toString()).await()
+                Log.i("data", dataRes.toString())
                 dataRes.content.forEach {
                     artistName.text = it.strArtist
                     name.text = it.strAlbum
@@ -67,7 +70,6 @@ class AlbumActivity : AppCompatActivity() {
                         votes.text = it.intScoreVotes + " votes"
                     }
                     description.text = it.strDescriptionEN
-
                 }
 
             } catch (e: HttpException) {

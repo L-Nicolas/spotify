@@ -70,7 +70,7 @@ class ListAdapterAlbum(val albums: MutableList<Album>) : RecyclerView.Adapter<Al
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, AlbumActivity::class.java)
-            intent.putExtra("id",holder.itemId.toString())
+            intent.putExtra("id",albums[position].id.toString())
             context.startActivity(intent)
         }
     }
