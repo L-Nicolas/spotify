@@ -1,6 +1,5 @@
-package fr.upsilon.spotify.Model.services
+package fr.upsilon.spotify.model.services
 
-import fr.upsilon.spotify.model.services.ArtistService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

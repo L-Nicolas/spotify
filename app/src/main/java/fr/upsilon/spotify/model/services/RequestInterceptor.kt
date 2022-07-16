@@ -1,4 +1,4 @@
-package fr.upsilon.spotify.Model.services
+package fr.upsilon.spotify.model.services
 
 import okhttp3.Interceptor
 import okhttp3.Response

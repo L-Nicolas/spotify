@@ -20,9 +20,6 @@ class Album(albumJson: JSONObject) {
     @SerializedName("strArtist")
     var artist: String
 
-    /*@SerializedName("intYearReleased")
-    var yearRelease: Int*/
-
     @SerializedName("strAlbumThumb")
     var thumb: String
 
@@ -31,7 +28,6 @@ class Album(albumJson: JSONObject) {
         this.idArtist = albumJson.getInt("idArtist")
         this.name = albumJson.getString("strAlbum")
         this.artist = albumJson.getString("strArtist")
-        //this.yearRelease = albumJson.getInt("intYearReleased")
         this.thumb = albumJson.getString("strAlbumThumb")
         if (this.thumb == "null" || this.thumb == "") {
             this.thumb =

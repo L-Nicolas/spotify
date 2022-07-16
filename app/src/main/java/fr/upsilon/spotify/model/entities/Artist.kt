@@ -1,8 +1,6 @@
 package fr.upsilon.spotify.model.entities
 
-import fr.upsilon.spotify.model.services.TrackService
 import org.json.JSONObject
-import retrofit2.await
 
 class Artist (trackJson: JSONObject){
 
