@@ -15,6 +15,5 @@ object ApiConnection {
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
     }
-
 }
 

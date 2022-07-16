@@ -1,5 +1,6 @@
 package fr.upsilon.spotify
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -65,6 +66,13 @@ class ListAdapterAlbum(val albums: MutableList<Album>) : RecyclerView.Adapter<Al
 
     override fun onBindViewHolder(holder: AlbumViewHolder, position: Int) {
         holder.setItem(albums[position], (position + 1))
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, AlbumActivity::class.java)
+            intent.putExtra("id",holder.itemId.toString())
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
