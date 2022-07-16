@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bottom_nav_bar_color.xml" value="0.1455" />
+        <entry key="app/src/main/res/drawable/fleche_droite.xml" value="0.1455" />
+        <entry key="app/src/main/res/drawable/ic_accueil_classements.xml" value="0.1455" />
+        <entry key="app/src/main/res/drawable/ic_rank.xml" value="0.1455" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13652482269503546" />
+        <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.10815602836879433" />
+        <entry key="app/src/main/res/layout/fragment_track_rank.xml" value="0.10815602836879433" />
+        <entry key="app/src/main/res/layout/item_rank.xml" value="0.10815602836879433" />
+        <entry key="app/src/main/res/layout/item_rank_shimmer.xml" value="0.10815602836879433" />
+        <entry key="app/src/main/res/menu/bottom_nav_bar.xml" value="0.22870370370370371" />
       </map>
     </option>
   </component>
