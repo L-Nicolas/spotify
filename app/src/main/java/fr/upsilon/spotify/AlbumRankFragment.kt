@@ -10,13 +10,13 @@ import android.widget.TextView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.esgi.yfitops.models.entities.Album
-import com.esgi.yfitops.models.repositories.AlbumStateError
-import com.esgi.yfitops.models.repositories.AlbumStateLoading
-import com.esgi.yfitops.models.repositories.AlbumStateSuccess
-import com.esgi.yfitops.viewModel.AlbumViewModel
+import fr.upsilon.spotify.model.entities.Album
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.squareup.picasso.Picasso
+import fr.upsilon.spotify.ViewModel.AlbumViewModel
+import fr.upsilon.spotify.model.repository.AlbumStateError
+import fr.upsilon.spotify.model.repository.AlbumStateLoading
+import fr.upsilon.spotify.model.repository.AlbumStateSuccess
 
 
 class AlbumRankFragment : Fragment() {

@@ -1,6 +1,6 @@
-package com.esgi.yfitops.models.services
+package fr.upsilon.spotify.model.services
 
-import com.esgi.yfitops.models.entities.Artist
+import fr.upsilon.spotify.model.entities.Artist
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

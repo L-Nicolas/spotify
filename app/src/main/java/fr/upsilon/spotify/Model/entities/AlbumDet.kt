@@ -1,4 +1,4 @@
-package com.esgi.yfitops.models.entities
+package fr.upsilon.spotify.model.entities
 
 class AlbumDet(id: Int, title: String, dateY: String) {
     var id: Int = 0

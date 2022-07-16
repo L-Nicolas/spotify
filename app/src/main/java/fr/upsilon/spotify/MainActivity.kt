@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(RankFragment())
                     return@setOnItemSelectedListener true
                 }
-                /*R.id.tab_search -> {
-                    loadFragment(PostFragment())
+                R.id.tab_search -> {
+                    loadFragment(SearchFragment())
                     return@setOnItemSelectedListener true
-                }*/
+                }
                 /*R.id.tab_favorites -> {
                     loadFragment(LiveFragment())
                     return@setOnItemSelectedListener true

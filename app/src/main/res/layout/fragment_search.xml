@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="10dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="10dp" />
+
+        <ImageView
+            android:id="@+id/line_a4"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="9dp"
+            android:paddingBottom="20dp"
+            android:src="@color/grey"
+            app:layout_constraintLeft_toRightOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <ImageView
+            android:id="@+id/line_a2"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:paddingBottom="20dp"
+            android:src="@color/grey"
+            app:layout_constraintLeft_toRightOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+        <ImageView
+            android:id="@+id/line_a3"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:paddingBottom="20dp"
+            android:src="@color/grey"
+            app:layout_constraintLeft_toRightOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/title3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="386dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintLeft_toRightOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/line_a3" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/search_artists"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="356dp"
+            android:text="@string/search_albums"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/search_title"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="391dp"
+            android:layout_height="47dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:startIconDrawable="@drawable/ic_search">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="386dp"
+            android:layout_height="165dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="366dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="159dp" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

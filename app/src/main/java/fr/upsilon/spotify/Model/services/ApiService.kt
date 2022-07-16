@@ -1,4 +1,4 @@
-package com.esgi.yfitops.models.services
+package fr.upsilon.spotify.model.services
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import retrofit2.Retrofit
