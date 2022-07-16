@@ -1,10 +1,22 @@
 package fr.upsilon.spotify
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.GsonBuilder
+import fr.upsilon.spotify.Model.entities.ArtistObject
+import fr.upsilon.spotify.model.services.ArtistService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,23 +30,63 @@ private const val ARG_PARAM2 = "param2"
  */
 class SearchFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var recyclerView: RecyclerView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        val view = inflater.inflate(R.layout.fragment_search, container, false)
+        recyclerView = view.findViewById(R.id.recyclerViewArtist)
+        getArtists()
+
+        return view
+
+    }
+
+
+    private fun getArtists(){
+
+
+
+    val retrofitBuilder = Retrofit.Builder()
+        .addConverterFactory(GsonConverterFactory.create())
+        .baseUrl("https://theaudiodb.com/api/v1/json/523532/")
+        .build()
+        .create(ArtistService::class.java)
+
+    //val retrofitData = retrofitBuilder.getArtists()
+
+       // Log.d("HELLO", "onFailure $retrofitData")
+
+        retrofitBuilder.getArtists().enqueue(object : Callback<ArtistObject?> {
+        @SuppressLint("NotifyDataSetChanged")
+        override fun onResponse(
+            call: Call<ArtistObject?>,
+            response: Response<ArtistObject?>
+        ) {
+            val responseBody = response.body()!!
+
+            Log.i("AAAAAAAAAAAAA", responseBody.toString())
+
+            //myAdapter.notifyDataSetChanged()
+            recyclerView.adapter = MyAdapter(responseBody)
+        }
+
+        override fun onFailure(call: Call<ArtistObject?>, t: Throwable) {
+            Log.d("SearchFragmentFail", "onFailure: " + t.message)
+        }
+    })
+
+
     }
 
     companion object {
