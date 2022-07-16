@@ -7,6 +7,8 @@ import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import fr.upsilon.spotify.view.RankFragment
+import fr.upsilon.spotify.view.SearchFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navBar: BottomNavigationView
@@ -49,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("ResourceType")
     private fun loadFragment(fragment: Fragment) {
-        //injecter le fragment dans notre boite (fragment_container)
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, fragment)
         transaction.setReorderingAllowed(true)

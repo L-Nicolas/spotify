@@ -1,4 +1,4 @@
-package fr.upsilon.spotify
+package fr.upsilon.spotify.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView
 import fr.upsilon.spotify.model.entities.Album
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.squareup.picasso.Picasso
-import fr.upsilon.spotify.ViewModel.AlbumViewModel
+import fr.upsilon.spotify.AlbumActivity
+import fr.upsilon.spotify.R
+import fr.upsilon.spotify.viewModel.AlbumViewModel
 import fr.upsilon.spotify.model.repository.AlbumStateError
 import fr.upsilon.spotify.model.repository.AlbumStateLoading
 import fr.upsilon.spotify.model.repository.AlbumStateSuccess

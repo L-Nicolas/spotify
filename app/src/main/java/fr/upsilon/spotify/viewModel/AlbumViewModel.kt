@@ -1,4 +1,4 @@
-package fr.upsilon.spotify.ViewModel
+package fr.upsilon.spotify.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
