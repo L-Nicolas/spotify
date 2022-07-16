@@ -1,8 +1,8 @@
-package com.esgi.yfitops.models.entities
+package fr.upsilon.spotify.model.entities
 
-import com.esgi.yfitops.models.services.AlbumService
-import com.esgi.yfitops.models.services.ApiConnection
 import com.google.gson.annotations.SerializedName
+import fr.upsilon.spotify.model.services.AlbumService
+import fr.upsilon.spotify.model.services.ApiConnection
 import org.json.JSONObject
 import retrofit2.await
 

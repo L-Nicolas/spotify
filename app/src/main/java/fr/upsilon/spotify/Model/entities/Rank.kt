@@ -1,4 +1,4 @@
-package com.esgi.yfitops.models.entities
+package fr.upsilon.spotify.model.entities
 
 import com.google.gson.annotations.SerializedName
 

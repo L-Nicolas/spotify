@@ -1,7 +1,7 @@
-package com.esgi.yfitops.models.services
+package fr.upsilon.spotify.model.services
 
-import com.esgi.yfitops.models.entities.Album
-import com.esgi.yfitops.models.entities.Rank
+import fr.upsilon.spotify.model.entities.Album
+import fr.upsilon.spotify.model.entities.Rank
 import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.http.GET

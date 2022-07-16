@@ -1,6 +1,6 @@
-package com.esgi.yfitops.models.repositories
+package fr.upsilon.spotify.model.repository
 
-import com.esgi.yfitops.models.entities.Track
+import fr.upsilon.spotify.model.entities.Track
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

@@ -1,10 +1,10 @@
-package com.esgi.yfitops.viewModel
+package fr.upsilon.spotify.ViewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.esgi.yfitops.models.repositories.AlbumRepository
-import com.esgi.yfitops.models.repositories.AlbumState
+import fr.upsilon.spotify.model.repository.AlbumRepository
+import fr.upsilon.spotify.model.repository.AlbumState
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 

@@ -1,7 +1,6 @@
-package com.esgi.yfitops.models.entities
+package fr.upsilon.spotify.model.entities
 
-import com.esgi.yfitops.models.services.AlbumService
-import com.esgi.yfitops.models.services.TrackService
+import fr.upsilon.spotify.model.services.TrackService
 import org.json.JSONObject
 import retrofit2.await
 
