@@ -4,8 +4,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import fr.upsilon.spotify.model.entities.Artists
 
 class MyAdapter (
@@ -14,6 +16,9 @@ class MyAdapter (
 
     inner class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
         var ArtistTitle: TextView = itemView.findViewById(R.id.artistTitle)
+        var ArtistImage: ImageView = itemView.findViewById(R.id.imageView2)
+        var ArtistImage2 = ArtistImage.setClipToOutline(true)
+
     }
 
     override fun getItemCount(): Int = ArtistsList.size
@@ -25,10 +30,13 @@ class MyAdapter (
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var ArtistTitles = ArtistsList[position].strArtist
+        val ArtistTitles = ArtistsList[position].strArtist
+        val ArtistImage = ArtistsList[position].strArtistThumb
 
         Log.d("OOOOOOO", "yes $ArtistTitles ")
         holder.ArtistTitle.text = ArtistTitles
+        Picasso.get().load(ArtistImage).into(holder.ArtistImage);
+
 
     }
 

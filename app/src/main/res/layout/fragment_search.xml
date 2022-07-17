@@ -40,8 +40,9 @@
             app:layout_constraintTop_toBottomOf="@+id/title3" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_albums"
             android:layout_width="386dp"
-            android:layout_height="165dp"
+            android:layout_height="0dp"
             android:layout_marginEnd="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,13 +54,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/search_artists"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="@id/guide_start"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewArtist"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start" />
 
         <TextView
             android:id="@+id/title3"
@@ -89,20 +90,19 @@
 
 
         <FrameLayout
+            android:id="@+id/search_bar_2"
             android:layout_width="388dp"
             android:layout_height="62dp"
             android:layout_marginStart="7dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="7dp"
             android:padding="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/title2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title">
 
             <EditText
-                android:id="@+id/calc_txt_Prise"
+                android:id="@+id/searchTextField"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_recherche_loupe"
@@ -113,7 +113,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/calc_clear_txt_Prise"
+                android:id="@+id/clear_textField"
                 android:layout_width="17dp"
                 android:layout_height="17dp"
                 android:layout_gravity="right|center_vertical"
@@ -124,10 +124,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewArtist"
-            android:layout_width="386dp"
+            android:layout_width="0dp"
             android:layout_height="165dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/title3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"

@@ -1,6 +1,7 @@
 package fr.upsilon.spotify.model.services
 
 import com.google.gson.JsonElement
+import fr.upsilon.spotify.model.entities.AlbumObject
 import fr.upsilon.spotify.model.entities.Artists
 import fr.upsilon.spotify.model.entities.Artist
 import fr.upsilon.spotify.model.entities.ArtistObject
@@ -17,7 +18,11 @@ interface ArtistService {
     fun searchArtist(@Query("s") id: String): Deferred<Artists>
 
 
-    @GET("search.php/?s=coldplay")
-    fun getArtists(): Deferred<ArtistObject>
+    @GET("search.php")
+    fun getArtists(@Query("s") id: String): Deferred<ArtistObject>
+
+
+    @GET("searchalbum.php")
+    fun getAlbum(@Query("s") id: String): Deferred<AlbumObject>
 
 }

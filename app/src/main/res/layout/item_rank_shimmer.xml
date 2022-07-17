@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/rank">
 
-        <ImageView
+        item_rank_shimmer.xml<ImageView
             android:id="@+id/thumb"
             android:layout_width="50dp"
             android:layout_height="50dp"
